@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plantify</title>
+    <link rel="stylesheet" href="http://127.0.0.1:5000/css/style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+      <div class="hero">
+        <a href="/" style="position: absolute;
+                text-decoration: none;
+                
+                top: 20px;
+                left: 20px;
+                width: 50px;
+                height: 50px;
+                background-color: #34A853;
+                border-radius: 50%;
+                align-items: center;
+                border: 2px solid #fff;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);">
+                <i class='bx bx-chevrons-left' style="color: #fff; font-size: 30px; position: relative; top: 8px; left: 7px;"></i>  
+              </button></a>
+        <form
+          action="http://127.0.0.1:5000/images/"
+          method="post"
+          id="image-upload-form"
+          enctype="multipart/form-data"
+        >
+          <label for="input-file" id="drop-area">
+            <input
+              type="file"
+              name="file"
+              id="input-file"
+              accept="image/*"
+              hidden
+            />
+            <div id="img-view">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                id="Upload"
+                style="width: 90px"
+              >
+                <path
+                  d="M398.1 233.2c0-1.2.2-2.4.2-3.6 0-65-51.8-117.6-115.7-117.6-46.1 0-85.7 27.4-104.3 67-8.1-4.1-17.2-6.5-26.8-6.5-29.5 0-54.1 21.9-58.8 50.5C57.3 235.2 32 269.1 32 309c0 50.2 40.1 91 89.5 91H224v-80h-48.2l80.2-83.7 80.2 83.6H288v80h110.3c45.2 0 81.7-37.5 81.7-83.4 0-45.9-36.7-83.2-81.9-83.3z"
+                  fill="#34a853"
+                  class="color000000 svgShape"
+                ></path>
+              </svg>
+              <p>Drag and drop or click here<br />to upload image</p>
+              <span>Upload any images from desktop.</span>
+            </div>
+          </label>
+          <button type="submit" id="submit-btn">submit</button>
+        </form>
+        <div id="response" class="response-placeholder" style="color: #fff">
+          Flower: {{flower}}
+        </div>
+      </div>
+
+    <!-- JavaScript Files -->
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="http://127.0.0.1:5000/js/app.js"></script>
+    <script src="http://127.0.0.1:5000/js/upload.js"></script>
+  </body>
+</html>
